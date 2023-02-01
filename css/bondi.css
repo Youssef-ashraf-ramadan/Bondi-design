@@ -1,0 +1,212 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*****main component********/
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+
+.container .main-title {
+  text-align: center;
+}
+.container .main-title::before {
+  content: '';
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.main-btn:hover{
+  background-color: var(--red-color);
+  color: var(--green-color);
+}
+
+/*****start navbar********/
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+  transition: 0.5s;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded='true'] {
+  border-color: var(--green-color);
+}
+.navbar .search {
+  color: white;
+  border-left: 1px solid var(--green-color);
+}
+
+/**********landing*****************/
+.landing {
+  background: var(--dark-color);
+  min-height: calc(100vh - 72px);
+}
+
+/******features*********/
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+.features h4 {
+  color: var(--yellow-color);
+}
+
+/*******start our work section*********/
+.our-works {
+  background-color: var(--section-color);
+}
+.our-works ul li.active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.our-works ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our-works ul li:not(.active):hover {
+  color: var(--red-color);
+}
+.our-works .box {
+  position: relative;
+  overflow: hidden;
+}
+.our-works .box::before {
+  content: attr(data-work);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(51 209 204 / 76%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+  -webkit-transform: translateX(calc(-100% - 5px));
+  -moz-transform: translateX(calc(-100% - 5px));
+  -ms-transform: translateX(calc(-100% - 5px));
+  -o-transform: translateX(calc(-100% - 5px));
+}
+.our-works .box:hover::before{
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+/**********stuff section************/
+.stuff .description{
+  max-width: 500px;
+}
+/*********our team*************/
+.our-team{
+  background-color: var(--section-color);
+}
+.our-team h2{
+  color: var(--yellow-color);
+}
+.our-team .container .row div .box h4{
+background-color: var(--green-color);
+}
+
+/********project section*****/
+.project{
+  background: var(--dark-color);
+}
+
+
+/*****section subscribe******/
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe ::placeholder {
+  color: white;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+/* End Subscribe */
+/* Start Footer */
+footer {
+  background-color: var(--dark-color);
+}
+footer .copyright > span {
+  color: var(--green-color);
+}
+footer .copyright div span {
+  color: var(--yellow-color);
+}
+footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+footer .facebook {
+  background-color: #1877f2;
+}
+footer .twitter {
+  background-color: #1da1f2;
+}
+footer .linkedin {
+  background-color: #0077b5;
+}
+footer .youtube {
+  background-color: #ff0000;
+}
+/* End Footer */
